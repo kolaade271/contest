@@ -14,6 +14,7 @@ import { GenAlert } from '../../src/alert/alert';
 import { Bars } from  'react-loader-spinner'
 import Nav from './nav';
 
+
 function SignUp() {
   const [getCategory, setCategory] = useState(false);
   const [getOption_a, setOption_a] = useState(false);
@@ -168,7 +169,17 @@ Nominate and claim for your self or others who merits</div>
               
               </div>
               
-             {isType? <div>
+             {isType? <div> {loading?<Bars
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="bars-loading"
+  wrapperStyle={{}}
+  wrapperClass="cent"
+  visible={true}
+/>
+
+:<div>
 
               <div className='avi'>Please choose your prefered type </div>
               <div className='container'>
@@ -188,23 +199,10 @@ Nominate and claim for your self or others who merits</div>
                 </div>
                 <div className="col-md-3">
                   <div className='card shadow-sm box-shadow'>
-                  <img src={medal} className="awardimg" />
-                   <div className='card-body'>
-                    <div className='subtitle'>MEDAL AWARD</div>
-                    <div className="amt">₦ 7,000.00</div>
-                    {getOption_b?
-                    <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
-                  :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="MEDAL AWARD" optionId={2} dataId={getDataId}  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
-                  }
-                   </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className='card shadow-sm box-shadow'>
                   <img src={wooden} className="awardimg" />
                    <div className='card-body'>
                     <div className='subtitle'>WOODEN  AWARD</div>
-                    <div className="amt">₦ 2,500.00</div>
+                    <div className="amt">₦ 7,000.00</div>
                     {getOption_c?
                     <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
                   :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="WOODEN AWARD" optionId={3} dataId={getDataId} data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
@@ -212,28 +210,43 @@ Nominate and claim for your self or others who merits</div>
                    </div>
                   </div>
                 </div>
+                
+                <div className="col-md-3">
+                  <div className='card shadow-sm box-shadow'>
+                  <img src={medal} className="awardimg" />
+                   <div className='card-body'>
+                    <div className='subtitle'>MEDAL AWARD</div>
+                    <div className="amt">₦ 1,600.00</div>
+                    {getOption_b?
+                    <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
+                  :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="MEDAL AWARD" optionId={2} dataId={getDataId}  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+                  }
+                   </div>
+                  </div>
+                </div>
+               
                 <div className="col-md-3">
                   <div className='card shadow-sm box-shadow'>
                   <img src={cert} className="awardimg" />
                    <div className='card-body'>
                     <div className='subtitle'>CERTIFICATE AWARD</div>
-                    <div className="amt">₦ 1,700.00</div>
+                    <div className="amt">₦ 1,300.00</div>
                     <button className=' btn btn-success submit'   onClick={HandleProcess}  value="CERTIFICATE AWARD" optionId={4} dataId={getDataId} data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
                    </div>
                   </div>
                 </div>
                 </div>
               </div>
-
+</div>}
               </div>: 
-              <div align="center">
+              <div align="center" className=''>
                 {loading?<Bars
   height="80"
   width="80"
   color="#4fa94d"
   ariaLabel="bars-loading"
   wrapperStyle={{}}
-  wrapperClass=""
+  wrapperClass="cent"
   visible={true}
 />
 
@@ -338,6 +351,14 @@ Nominate and claim for your self or others who merits</div>
   </div>
 </div>
 {/* end modal */}
+
+
+
+
+<footer className="foot" align="center">
+      <span> All right reseverd @ Paysnug Africa</span>
+     
+    </footer>
     </div>
   );
 }
