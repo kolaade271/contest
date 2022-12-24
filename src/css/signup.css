@@ -15,6 +15,12 @@ height: 50px;
 .foot{
   padding: 20px;
 }
+.img{
+  height: 80px;
+  width: 80px;
+}
+
+
 
 .navbar{
   background:rgb(25, 25, 112)

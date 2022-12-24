@@ -7,6 +7,8 @@ import phone from "../img/phone.png";
 import golden from "../img/golden.png";
 import medal from "../img/medal.png";
 import wooden from "../img/wooden.png";
+import bsug from "../img/bsug.jpeg";
+import bsh from "../img/bsh.png";
 import cert from "../img/cert.png";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -137,11 +139,18 @@ const changeCategory = (event) => {
                 <div className='orgby'> <img src={org} className="conicon"/> &nbsp;&nbsp;Organized By:</div>
                 <div className='orgname'>Bousti SUG</div>
                 <div className='orgby'><img src={message} className="conicon"/>&nbsp;&nbsp;Email:</div>
-                <div className='orgname'>buesti @gmail.com</div>
+                <div className='orgname'>sugbouesti@gmail.com</div>
                 <div className='orgby'> <img src={phone} className="conicon"/> &nbsp;&nbsp;Phone:</div>
-                <div className='orgname'>08067366232</div>
+                <div className='orgname'>+2348167482499</div>
                 <br/>
                 <br/>
+     
+                <div className='row'>
+          <div className=' col'>  <img src={bsug} alt="Forest" className='img'/></div>
+          <div className='col'>  <img src={bsh} alt="Forest" className='img'/></div>
+         </div>
+          <br/>
+
                 </div>
               </div>
             </div>
