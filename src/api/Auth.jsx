@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const Category = () => {
-  return (axios.post("https://c84f-102-89-41-208.eu.ngrok.io/cont/category.php",
+  return (axios.post("https://app.paysnug.link/cont/category",
     {
     }, {
     headers: {
@@ -15,7 +15,7 @@ export const Category = () => {
 
 
 export const Gettype = (option) => {
-  return (axios.post("https://c84f-102-89-41-208.eu.ngrok.io/cont/gettype.php",
+  return (axios.post("https://app.paysnug.link/cont/gettype",
     {
       option:option
     }, {
@@ -28,7 +28,7 @@ export const Gettype = (option) => {
 
 
 export const Submit = (fullname,phone,dept,dataId,optionId) => {
-  return (axios.post("https://c84f-102-89-41-208.eu.ngrok.io/cont/submit.php",
+  return (axios.post("https://app.paysnug.link/cont/submit",
     {
       fullName:fullname,
       phone:phone,
@@ -44,7 +44,7 @@ export const Submit = (fullname,phone,dept,dataId,optionId) => {
 }
 
 export const Confirm = (id) => {
-  return (axios.post("https://c84f-102-89-41-208.eu.ngrok.io/cont/confirm.php",
+  return (axios.post("https://app.paysnug.link/cont/confirm",
     {
       confirm:id
     }, {
