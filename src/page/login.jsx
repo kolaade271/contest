@@ -1,6 +1,6 @@
 import '../css/signup.css';
 import React, { useState, useEffect } from 'react';
-import { Category,Gettype,Submit} from '../../src/api/Auth';
+import { Category,Gettype,Submit,Confirm} from '../../src/api/Auth';
 import org from "../img/corporation.png";
 import message from "../img/message.png";
 import phone from "../img/phone.png";
@@ -50,8 +50,30 @@ const HandleProcess = (process) => {
 
 }
 
+
+const Confirmdata = (process) => {
+ 
+  const id = process.target.getAttribute('confirm');
+  setLoading(true)
+  Confirm(id).then(response => {
+    const stat = response.data.data;
+    setLoading(false)
+    if(stat === true){
+      
+      GenAlert(true, "Transaction Successull close the page");
+
+    }
+    else{
+      GenAlert(false, "Transaction pending");
+    }
+    
+  })
+
+}
+
 const Close = () => {
   window.location.reload();
+
 }
 
 const SubmitData = (process) => {
@@ -325,7 +347,7 @@ Nominate and claim for your self or others who merits</div>
 
     <div className="modal-footer">
       <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={Close}>Close</button>
-      <button type="button" className="btn btn-primary">confirm</button>
+      <button type="button" className="btn btn-primary" confirm={getAcct.acctNo} onClick={Confirmdata}  disabled={loading}>{loading ? 'Loading...' : 'Confirm'}</button>
     </div>
   </div>:
 

@@ -43,3 +43,15 @@ export const Submit = (fullname,phone,dept,dataId,optionId) => {
 
 }
 
+export const Confirm = (id) => {
+  return (axios.post("https://c84f-102-89-41-208.eu.ngrok.io/cont/confirm.php",
+    {
+      confirm:id
+    }, {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }));
+
+}
+
