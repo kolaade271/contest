@@ -137,7 +137,7 @@ const changeCategory = (event) => {
               <div className='card'>
                 <div className="container">
                 <div className='orgby'> <img src={org} className="conicon"/> &nbsp;&nbsp;Organized By:</div>
-                <div className='orgname'>Bousti SUG</div>
+                <div className='orgname'>BOUESTI SUG</div>
                 <div className='orgby'><img src={message} className="conicon"/>&nbsp;&nbsp;Email:</div>
                 <div className='orgname'>sugbouesti@gmail.com</div>
                 <div className='orgby'> <img src={phone} className="conicon"/> &nbsp;&nbsp;Phone:</div>
