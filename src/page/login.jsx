@@ -1,5 +1,5 @@
 import '../css/signup.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Category,Gettype,Submit} from '../../src/api/Auth';
 import org from "../img/corporation.png";
 import message from "../img/message.png";
@@ -33,14 +33,14 @@ function SignUp() {
   const phoneno = useFormInput('');
   const deptno = useFormInput('');
 
-  window.addEventListener('load', () => {
 
+useEffect(() => {
   Category().then(response => {
     console.log(response.data)
     setCategory(response.data.data)
 
-  })   
-});
+  }) 
+}, [])
 const HandleProcess = (process) => {
   const action = process.target.value;
   const optionId = process.target.getAttribute('optionId');
@@ -166,7 +166,7 @@ Nominate and claim for your self or others who merits</div>
               <label className="form-label">Award Category *</label>
               <select className="form-select  form-control form-select-lg mb-3" aria-label=".form-select-lg example" onChange={changeCategory}>
               
-  <option selected>Open this select menu</option>
+  <option >Open this select menu</option>
   {getCategory? getCategory.map(data => (
      <option value={data.id}>{data.name}</option>
                     )): "null" }
