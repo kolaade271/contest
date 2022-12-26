@@ -340,7 +340,7 @@ Nominate and claim for your self or others who merits</div>
           <br/>
           <hr/>
           </div>
-          <p className='notex'>Do not close this page once you  transfer  to the account click on confirm </p>
+          <p className='notex'>Amount below or above ₦ {getAcct.amount} will be count as void  </p>
          
           
     </div>
