@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GenAlert } from '../../src/alert/alert';
 import { Bars } from  'react-loader-spinner'
 import Nav from './nav';
+import Countdown from 'react-countdown';
 
 
 function SignUp() {
@@ -101,15 +102,18 @@ const SubmitData = (process) => {
       }
       else{
         GenAlert(false, "Department Required");
+        setLoading(false)
       }
     }
     else{
       GenAlert(false, "Phone  Required");
+      setLoading(false)
     }
 
   }
   else{
     GenAlert(false, "Fullname Required");
+    setLoading(false)
   }
 
 }
@@ -166,6 +170,10 @@ const changeCategory = (event) => {
                 <div className='orgname'>+2348167482499</div>
                 <br/>
                 <br/>
+                <div className='orgname'>CountDown:</div>
+                <div className='countdownn'><Countdown date={"Dec 31, 2022 00:00:00"} /></div>
+                <br/>
+                 
      
                 <div className='row'>
           <div className=' col'>  <img src={bsug} alt="Forest" className='img'/></div>
