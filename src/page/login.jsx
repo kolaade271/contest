@@ -171,7 +171,7 @@ const changeCategory = (event) => {
                 <br/>
                 <br/>
                 <div className='orgname'>CountDown:</div>
-                <div className='countdownn'><Countdown date={"Dec 31, 2022 00:00:00"} /></div>
+                <div className='countdownn'><Countdown date={"Jan 08, 2023 00:00:00"} /></div>
                 <br/>
                  
      
