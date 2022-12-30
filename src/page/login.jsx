@@ -242,7 +242,7 @@ Nominate and claim for your self or others who merits</div>
                    <div className='card-body'>
                     <div className='subtitle'>WOODEN  AWARD</div>
                     <div className="amt">₦ 7,000.00</div>
-                    {getOption_c?
+                    {getOption_b?
                     <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
                   :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="WOODEN AWARD" optionId={3} dataId={getDataId} data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
                   }
@@ -256,7 +256,7 @@ Nominate and claim for your self or others who merits</div>
                    <div className='card-body'>
                     <div className='subtitle'>MEDAL AWARD</div>
                     <div className="amt">₦ 1,600.00</div>
-                    {getOption_b?
+                    {getOption_c?
                     <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
                   :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="MEDAL AWARD" optionId={2} dataId={getDataId}  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
                   }
