@@ -144,7 +144,7 @@ const changeCategory = (event) => {
      
       <ToastContainer />
       
-          <div className="head">
+          <div className="">
         <div className="container">
           Shut down 
   </div>
