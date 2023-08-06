@@ -141,12 +141,252 @@ const changeCategory = (event) => {
 
   return (
     <div className="body">
-     
+      <Nav/>
       <ToastContainer />
       
-          <div className="">
+          <div className="head">
         <div className="container">
-          Shut down 
+            <div className="title" align="center"> BOUESTI SUGAN Award'23</div>
+            <div className="dsc" align="center">SUGAN Award'23 is Student union Government award Night, event on the 13th of January 2023 at Bamidele Olumilua University of Education Science and Technology. Ikere Ekiti, Ekiti state. (BOUESTI)</div>
+            
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <div className="container">
+        
+
+        <div className="row  ">
+          <div className="col-lg-3 col-md-3  mtx ">
+            <div className='orginfo'>
+              <div className='card'>
+                <div className="container">
+                <div className='orgby'> <img src={org} className="conicon"/> &nbsp;&nbsp;Organized By:</div>
+                <div className='orgname'>BOUESTI SUG</div>
+                <div className='orgby'><img src={message} className="conicon"/>&nbsp;&nbsp;Email:</div>
+                <div className='orgname'>sugbouesti@gmail.com</div>
+                <div className='orgby'> <img src={phone} className="conicon"/> &nbsp;&nbsp;Phone:</div>
+                <div className='orgname'>+2348167482499</div>
+                <br/>
+                <br/>
+                <div className='orgname'>CountDown:</div>
+                <div className='countdownn'><Countdown date={"Jan 08, 2023 00:00:00"} /></div>
+                <br/>
+                 
+     
+                <div className='row'>
+          <div className=' col'>  <img src={bsug} alt="Forest" className='img'/></div>
+          <div className='col'>  <img src={bsh} alt="Forest" className='img'/></div>
+         </div>
+          <br/>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-9 col-md-9 col-md-push-9">
+                <div className=" ">
+            <div className=" card ">
+              <div className='sh'>Contest</div>
+              <div className='note-2'>Below are the list of the available awards which have different options each.
+Nominate and claim for your self or others who merits</div>
+              <div className='signup-form'>
+              <div className="mb-3">
+              <label className="form-label">Award Category *</label>
+              <select className="form-select  form-control form-select-lg mb-3" aria-label=".form-select-lg example" onChange={changeCategory}>
+              
+  <option >Open this select menu</option>
+  {getCategory? getCategory.map(data => (
+     <option value={data.id}>{data.name}</option>
+                    )): "null" }
+</select>
+</div>
+
+               
+               
+              
+              </div>
+              
+             {isType? <div> {loading?<Bars
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="bars-loading"
+  wrapperStyle={{}}
+  wrapperClass="cent"
+  visible={true}
+/>
+
+:<div>
+
+              <div className='avi'>Please choose your prefered type </div>
+              <div className='container'>
+              <div className='row'>
+               <div className="col-md-3">
+                  <div className='card shadow-sm box-shadow'>
+                   <img src={golden} className="awardimg" />
+                   <div className='card-body'>
+                    <div className='subtitle'>GOLDEN PLATE AWARD</div>
+                    <div className="amt">₦ 15,000.00</div>
+                    {getOption_a?
+                    <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
+                  :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="GOLDEN PLATE AWARD" optionId={1} dataId={getDataId}  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+                  }
+                   </div>
+                  </div>
+                </div>
+                <div className="col-md-3">
+                  <div className='card shadow-sm box-shadow'>
+                  <img src={wooden} className="awardimg" />
+                   <div className='card-body'>
+                    <div className='subtitle'>WOODEN  AWARD</div>
+                    <div className="amt">₦ 7,000.00</div>
+                    {getOption_b?
+                    <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
+                  :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="WOODEN AWARD" optionId={3} dataId={getDataId} data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+                  }
+                   </div>
+                  </div>
+                </div>
+                
+                <div className="col-md-3">
+                  <div className='card shadow-sm box-shadow'>
+                  <img src={medal} className="awardimg" />
+                   <div className='card-body'>
+                    <div className='subtitle'>MEDAL AWARD</div>
+                    <div className="amt">₦ 1,600.00</div>
+                    {getOption_c?
+                    <button className=' btn btn-danger outof' disabled>Out of Stock</button>  
+                  :<button className=' btn btn-success submit'  onClick={HandleProcess}  value="MEDAL AWARD" optionId={2} dataId={getDataId}  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+                  }
+                   </div>
+                  </div>
+                </div>
+               
+                <div className="col-md-3">
+                  <div className='card shadow-sm box-shadow'>
+                  <img src={cert} className="awardimg" />
+                   <div className='card-body'>
+                    <div className='subtitle'>CERTIFICATE AWARD</div>
+                    <div className="amt">₦ 1,300.00</div>
+                    <button className=' btn btn-success submit'   onClick={HandleProcess}  value="CERTIFICATE AWARD" optionId={4} dataId={getDataId} data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+                   </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+</div>}
+              </div>: 
+              <div align="center" className=''>
+                {loading?<Bars
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="bars-loading"
+  wrapperStyle={{}}
+  wrapperClass="cent"
+  visible={true}
+/>
+
+:<div className='awardcart'>Please select award</div>}
+              </div>
+              }
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+{/* start modal */}
+      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    {getAcct?
+    
+    <div className="modal-content">
+    <div className="modal-header">
+      <h5 className="modal-title" id="staticBackdropLabel"><b>Payment Details </b></h5>
+    </div>
+    <div className="modal-body">
+    <p align="center">Transfer ₦ {getAcct.amount} to the account below</p>
+    <div className="row">
+        <div className="col"><b>Account Name</b></div>
+          <div className="col" align="right">{getAcct.name}</div>
+          <br/>
+          <hr/>
+          </div>
+          <div className="row">
+        <div className="col"><b>Account No</b></div>
+          <div className="col" align="right">{getAcct.acctNo}</div>
+          <br/>
+          <hr/>
+          </div>
+
+          <div className="row">
+        <div className="col"><b>Bank Name</b></div>
+          <div className="col" align="right">{getAcct.bankName}</div>
+          <br/>
+          <hr/>
+          </div>
+
+          <div className="row">
+        <div className="col"><div className='b'>Amount</div></div>
+          <div className="col" align="right">₦ {getAcct.amount}</div>
+          <br/>
+          <hr/>
+         
+          </div>
+          <div className="row">
+        <div className="col"><b>Award Name</b></div>
+          <div className="col" align="right">{getAcct.category}</div>
+          <br/>
+          <hr/>
+          </div>
+          <div className="row">
+        <div className="col"><b>Award Type</b></div>
+          <div className="col" align="right">{getAcct.ctype}</div>
+          <br/>
+          <hr/>
+          </div>
+          <p className='notex'>Amount below or above ₦ {getAcct.amount} will be count as void  </p>
+         
+          
+    </div>
+
+    <div className="modal-footer">
+      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={Close}>Close</button>
+      <button type="button" className="btn btn-primary" confirm={getAcct.acctNo} onClick={Confirmdata}  disabled={loading}>{loading ? 'Loading...' : 'Confirm'}</button>
+    </div>
+  </div>:
+
+
+
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="staticBackdropLabel">Enter your Details </h5>
+      </div>
+      <div className="modal-body">
+      <div className="mb-3">
+<label className="form-label">Fullname*</label>
+  <input type="text" className="form-control"  {...name} placeholder="Your name" required />
+</div>
+<div className="mb-3">
+<label className="form-label">Phone*</label>
+  <input type="number" className="form-control" {...phoneno}  placeholder="Phone No" required />
+</div>
+<div className="mb-3">
+<label className="form-label">Department*</label>
+  <input type="text" className="form-control" {...deptno} placeholder="Your Department" required/>
+</div>
+<p><b>Category :</b> {allData?allData.name:null}</p>
+<p> <b>Type :</b> {ttype}</p>
+
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" className="btn btn-success" dataId={getDataId} optionId={getoptionId} onClick={SubmitData}  disabled={loading}>{loading ? 'Loading...' : 'Make Payment'}</button>
+      </div>
+    </div>}
   </div>
 </div>
 {/* end modal */}
